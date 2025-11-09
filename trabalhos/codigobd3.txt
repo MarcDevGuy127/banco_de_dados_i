@@ -1,0 +1,47 @@
+/* Lógico_1: */
+
+CREATE TABLE Cliente (
+    Nome STRING,
+    Cidade STRING,
+    Endereco STRING,
+    CEP INT,
+    CNPJ INT PRIMARY KEY,
+    Inscricao_estadual INT,
+    fk_Pedido_ID_Pedido INT
+);
+
+CREATE TABLE Pedido (
+    Nome_Vendedor STRING,
+    ID_Pedido INT PRIMARY KEY,
+    fk_Produto_Codigo INT
+);
+
+CREATE TABLE Produto (
+    QNTDE INT,
+    Codigo INT PRIMARY KEY,
+    Descricao STRING,
+    Valor_unitario INT,
+    Unidade_medida STRING
+);
+
+CREATE TABLE Vendedor (
+    Nome STRING PRIMARY KEY,
+    Faixa_comissao INT,
+    Salario_fixo INT,
+    fk_Pedido_ID_Pedido INT
+);
+ 
+ALTER TABLE Cliente ADD CONSTRAINT FK_Cliente_2
+    FOREIGN KEY (fk_Pedido_ID_Pedido)
+    REFERENCES Pedido (ID_Pedido)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Pedido ADD CONSTRAINT FK_Pedido_2
+    FOREIGN KEY (fk_Produto_Codigo)
+    REFERENCES Produto (Codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Vendedor ADD CONSTRAINT FK_Vendedor_2
+    FOREIGN KEY (fk_Pedido_ID_Pedido)
+    REFERENCES Pedido (ID_Pedido)
+    ON DELETE RESTRICT;

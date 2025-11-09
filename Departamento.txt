@@ -1,0 +1,74 @@
+CREATE TABLE Projeto (
+    numero_projeto INT PRIMARY KEY,
+    verba_projeto DECIMAL(12,2)
+);
+
+CREATE TABLE Projeto_Envolvido (
+    numeros_projetos INT PRIMARY KEY,
+    valores_projeto DECIMAL(12,2),
+    FOREIGN KEY (numeros_projetos) REFERENCES Projeto(numero_projeto)
+);
+
+CREATE TABLE Departamento (
+    numero_departamento INT PRIMARY KEY,
+    verba_departamento DECIMAL(12,2),
+    gerente_departamento VARCHAR(100),
+    empregados INT,
+    projetos_departamento INT,
+    escritorios_departamento INT
+);
+
+CREATE TABLE Contem_Escritorio (
+    quantidade_escritorios INT PRIMARY KEY,
+    area DECIMAL(10,2),
+    telefone VARCHAR(15)
+);
+
+CREATE TABLE Escritorio (
+    numero_escritorio INT PRIMARY KEY,
+    area DECIMAL(10,2),
+    telefone VARCHAR(15)
+);
+
+CREATE TABLE Equipe_Escritorio (
+    numeros_empregados INT,
+    numeros_escritorios INT,
+    PRIMARY KEY (numeros_empregados, numeros_escritorios),
+    FOREIGN KEY (numeros_escritorios) REFERENCES Escritorio(numero_escritorio)
+);
+
+CREATE TABLE Empregado (
+    numero_empregado INT PRIMARY KEY,
+    numero_projeto INT,
+    numero_escritorio INT,
+    telefone VARCHAR(15),
+    trabalhos_realizados INT,
+    FOREIGN KEY (numero_projeto) REFERENCES Projeto(numero_projeto),
+    FOREIGN KEY (numero_escritorio) REFERENCES Escritorio(numero_escritorio)
+);
+
+CREATE TABLE Atuacao_Empregado (
+    funcao VARCHAR(50),
+    historicos INT,
+    PRIMARY KEY (funcao),
+    FOREIGN KEY (historicos) REFERENCES Empregado(numero_empregado)
+);
+
+CREATE TABLE Trabalho (
+    funcao VARCHAR(50) PRIMARY KEY,
+    historico INT,
+    FOREIGN KEY (historico) REFERENCES Atuacao_Empregado(historicos)
+);
+
+CREATE TABLE Historico (
+    numero_historico INT PRIMARY KEY,
+    salario DECIMAL(12,2),
+    data DATE
+);
+
+CREATE TABLE Gera_Historico (
+    data DATE,
+    numero_historico INT,
+    PRIMARY KEY (data, numero_historico),
+    FOREIGN KEY (numero_historico) REFERENCES Historico(numero_historico)
+);

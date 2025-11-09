@@ -1,0 +1,13 @@
+Obter dados
+Texto/csv
+abrir
+transformar os dados(caso precisar alterar conteudo pre visualizado)
+fechar janela
+aplicar alterações? sim
+visualizações: selecionar cartão
+visualizações/campos -> soma -> media
+	obter dados -> procurar arquivo na pasta
+	selecionar mais de um arquivo la
+	combinar arquivos -> altera o que precisar -> ok
+	fecha -> ok
+		obter dados -> selecionar url -> ok -> conectar

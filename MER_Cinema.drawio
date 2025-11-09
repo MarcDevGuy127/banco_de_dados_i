@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0" version="28.2.7">
+  <diagram name="Page-1" id="z4dkj-X2q0eWmClO6WVG">
+    <mxGraphModel dx="1477" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="51iolID5XWB18oTaNy-z-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classicThin;startFill=1;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-1" target="51iolID5XWB18oTaNy-z-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-1" value="Cliente" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="305" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-2" target="51iolID5XWB18oTaNy-z-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-2" value="Pedir" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-6" target="51iolID5XWB18oTaNy-z-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-6" value="Pedido" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="305" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-8" target="51iolID5XWB18oTaNy-z-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-8" value="Carrinho de Compras" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="435" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990.0000000000002" y="459.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-10" value="Forma de Pagamento" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="420" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classicThin;startFill=1;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-15" target="51iolID5XWB18oTaNy-z-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-15" value="Efetuar Pagamento" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="435" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-18" target="51iolID5XWB18oTaNy-z-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-18" value="Ingresso" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="435" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150.0000000000002" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="51iolID5XWB18oTaNy-z-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1350" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-20" value="Sessão" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="550" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-24" value="Filme" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="565" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="51iolID5XWB18oTaNy-z-27" value="Sala" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="565" width="120" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

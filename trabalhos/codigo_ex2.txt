@@ -1,0 +1,100 @@
+/* Lógico_1: */
+
+CREATE TABLE Distribuidora (
+    CNPJ INT PRIMARY KEY,
+    fk_Cinema_ID INT
+);
+
+CREATE TABLE Cinema (
+    ID INT PRIMARY KEY,
+    Nome_fantasia STRING,
+    Endereco STRING,
+    Capacidade INT
+);
+
+CREATE TABLE Filme (
+    Titulo STRING PRIMARY KEY,
+    Traducao STRING,
+    Genero STRING,
+    Duracao INT,
+    Pais_de_origem STRING,
+    Elenco STRING,
+    Diretor STRING,
+    fk_Sessao_Lotacao INT
+);
+
+CREATE TABLE Sessao (
+    Lotacao INT PRIMARY KEY
+);
+
+CREATE TABLE Ator (
+    ID INT PRIMARY KEY,
+    Nome STRING,
+    Nacionalidade STRING,
+    Idade INT
+);
+
+CREATE TABLE Diretor (
+    Nome STRING PRIMARY KEY
+);
+
+CREATE TABLE Tem (
+    fk_Cinema_ID INT,
+    fk_Filme_Titulo STRING
+);
+
+CREATE TABLE Participa_Ator_Filme_Diretor (
+    fk_Ator_ID INT,
+    fk_Filme_Titulo STRING,
+    fk_Diretor_Nome STRING
+);
+
+CREATE TABLE Dirige (
+    fk_Diretor_Nome STRING,
+    fk_Filme_Titulo STRING
+);
+ 
+ALTER TABLE Distribuidora ADD CONSTRAINT FK_Distribuidora_2
+    FOREIGN KEY (fk_Cinema_ID)
+    REFERENCES Cinema (ID)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Filme ADD CONSTRAINT FK_Filme_2
+    FOREIGN KEY (fk_Sessao_Lotacao)
+    REFERENCES Sessao (Lotacao)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Tem ADD CONSTRAINT FK_Tem_1
+    FOREIGN KEY (fk_Cinema_ID)
+    REFERENCES Cinema (ID)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Tem ADD CONSTRAINT FK_Tem_2
+    FOREIGN KEY (fk_Filme_Titulo)
+    REFERENCES Filme (Titulo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Participa_Ator_Filme_Diretor ADD CONSTRAINT FK_Participa_Ator_Filme_Diretor_1
+    FOREIGN KEY (fk_Ator_ID)
+    REFERENCES Ator (ID)
+    ON DELETE NO ACTION;
+ 
+ALTER TABLE Participa_Ator_Filme_Diretor ADD CONSTRAINT FK_Participa_Ator_Filme_Diretor_2
+    FOREIGN KEY (fk_Filme_Titulo)
+    REFERENCES Filme (Titulo)
+    ON DELETE NO ACTION;
+ 
+ALTER TABLE Participa_Ator_Filme_Diretor ADD CONSTRAINT FK_Participa_Ator_Filme_Diretor_3
+    FOREIGN KEY (fk_Diretor_Nome)
+    REFERENCES Diretor (Nome)
+    ON DELETE NO ACTION;
+ 
+ALTER TABLE Dirige ADD CONSTRAINT FK_Dirige_1
+    FOREIGN KEY (fk_Diretor_Nome)
+    REFERENCES Diretor (Nome)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Dirige ADD CONSTRAINT FK_Dirige_2
+    FOREIGN KEY (fk_Filme_Titulo)
+    REFERENCES Filme (Titulo)
+    ON DELETE RESTRICT;
