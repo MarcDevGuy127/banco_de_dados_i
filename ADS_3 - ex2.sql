@@ -1,0 +1,24 @@
+CREATE DATABASE Editora;
+USE Editora;
+
+CREATE TABLE Editora (
+	Codigo INT PRIMARY KEY,
+	Nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Livro (
+	Codigo INT PRIMARY KEY,
+	Titulo VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Publica (
+	Cod_Editora INT FOREIGN KEY REFERENCES Editora(Codigo),
+	Cod_Livro INT FOREIGN KEY REFERENCES Livro(Codigo),
+	Preco INT NOT NULL,
+	Dt_lancamento DATETIME
+);
+
+INSERT INTO Editora
+VALUES(
+	
+);
